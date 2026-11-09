@@ -1,67 +1,53 @@
-Volatility Memory Forensics – DFIR Case Analysis
+# Volatility Memory Forensics — Two Case Analysis
 
-This repository contains a complete Digital Forensics and Incident Response (DFIR) investigation performed on two memory images using Volatility 3. The analysis includes host profiling, process inspection, malware attribution, detection of suspicious indicators, and confirmation of ransomware activity. The goal of this project is to demonstrate practical memory forensics skills typically required for SOC, IR, and DFIR analyst roles.
+> TryHackMe · Memory forensics on two images with **Volatility 3** — a banking trojan and a WannaCry infection.
 
-Contents
+## Overview
 
-Volatility_Memory_Forensics_Report.pdf
-Full written report documenting findings from Investigation 1 (Banking Trojan) and Investigation 2 (WannaCry ransomware).
+A memory-forensics investigation of two acquired memory images: Investigation 1 (banking trojan delivered via a malicious Adobe document) and Investigation 2 (WannaCry ransomware). Work covered host profiling, process inspection, module/DLL analysis, IOC extraction, and malware-family attribution.
 
-evidence/screenshots/
-Directory containing all screenshots referenced in the report.
+## Tools
 
-Tools Used
+Volatility 3 Framework; standard Linux utilities (`grep`, `strings`).
 
-Volatility 3 Framework
-Used to analyze Windows memory artifacts, enumerate processes, inspect DLLs, extract strings, and identify indicators of compromise.
+## Investigation 1 — Banking Trojan
 
-Standard Linux utilities (grep, strings, etc.)
+- **Host:** Windows XP (build 2600), system time `2012-07-22 02:45:08`.
+- **Suspicious process:** `reader_sl.exe` (PID 1640), parent `explorer.exe` (PID 1636) — impersonating Adobe Reader.
+- **Network:** memory strings show access to online-banking domains (Chase) — consistent with credential harvesting.
+- **User-agent:** `Mozilla/5.0 (Windows; U; MSIE 7.0; Windows NT 6.0; en-US)`.
 
-Case Summaries
-Investigation 1 – Banking Trojan
+## Investigation 2 — WannaCry Ransomware
 
-A memory dump from a quarantined endpoint was analyzed. Key findings include:
+- **Suspicious process:** `WanaDecryptor.exe` (PID 740) at `C:\Intel\ivecucqmanpnirkt615\WanaDecryptor@.exe`.
+- **Parent:** `tasksche.exe` (PID 1940) — abused for persistence.
+- **Attribution:** WannaCry (process name, directory structure, mutexes, DLL loads).
+- **Networking DLL:** `ws2_32.dll` (Windows Sockets) loaded for C2.
+- **Mutexes:** `ShimCacheMutex`, `MsWinZonesCacheCounterMutexA`, `MsWinZonesCacheCounterMutexA0`.
 
-Malicious process impersonating Adobe Reader (reader_sl.exe)
+## Indicators of compromise
 
-Evidence of online banking domain access
+| Case | Type | Indicator |
+|---|---|---|
+| 1 | Process | `reader_sl.exe` (PID 1640) |
+| 1 | User-agent | `MSIE 7.0; Windows NT 6.0` |
+| 2 | Process | `WanaDecryptor.exe` (PID 740) |
+| 2 | Path | `C:\Intel\ivecucqmanpnirkt615\WanaDecryptor@.exe` |
+| 2 | Mutex | `MsWinZonesCacheCounterMutexA` |
 
-Suspicious user-agent consistent with credential-harvesting malware
+## Evidence
 
-Process tree anomalies and injected code regions
+![Case 1 — malfind suspicious process](evidence/screenshots/3_case1_malfind_suspicious_process.png)
+![Case 1 — banking domain evidence](evidence/screenshots/6_case1_suspicious_bank_domain.png)
+![Case 2 — WannaCry process](evidence/screenshots/7_case2_suspicious_process.png)
+![Case 2 — WannaCry mutex indicator](evidence/screenshots/9_case2_mutex_indicator_of_malware.png)
 
-Investigation 2 – WannaCry Ransomware
+All 9 screenshots are in [`evidence/screenshots/`](evidence/screenshots/).
 
-A second memory dump revealed:
+## Full report
 
-Active WannaCry decryptor process (WanaDecryptor.exe)
+📄 [volatility_memory_forensics_report.pdf](report/volatility_memory_forensics_report.pdf)
 
-Malicious file path and persistence mechanism
+---
 
-Known WannaCry mutex artifacts
-
-DLLs used for network communication
-
-Skills Demonstrated
-
-Memory acquisition interpretation
-
-Malware process identification
-
-Parent/child process reconstruction
-
-Network indicator extraction
-
-Mutex and DLL analysis
-
-Malware family attribution
-
-Professional DFIR report creation
-
-Directory Structure
-volatility-memory-forensics/
-│
-├── Volatility_Memory_Forensics_Report.pdf
-├── README.md
-└── evidence/
-    └── screenshots/
+*Skills: process/DLL inspection, parent-child reconstruction, network-indicator extraction, mutex analysis, malware attribution. Originally published at `github.com/hordiikorol/volatility-memory-forensics`.*

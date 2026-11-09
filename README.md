@@ -27,9 +27,9 @@ Standalone DFIR / blue-team investigations, each with a full report and supporti
 |---|---|---|
 | [Investigating Windows DFIR](tryhackme/investigating-windows-dfir/) | Host-based Windows Server compromise analysis | [PDF](tryhackme/investigating-windows-dfir/report/windows_host_compromise_analysis.pdf) |
 | [DFIR — Windows & Splunk Investigations](tryhackme/dfir-windows-and-splunk-investigations/) | Splunk log intrusion analysis | [PDF](tryhackme/dfir-windows-and-splunk-investigations/report/splunk_log_intrusion_analysis.pdf) |
-| [Volatility Memory Forensics](tryhackme/volatility-memory-forensics/) | Memory forensics (banking trojan, WannaCry) | [PDF](tryhackme/volatility-memory-forensics/report/Volatility_Memory_Forensics_Report.dpf.pdf) |
-| [MirrorBlast C2 Analysis](tryhackme/mirrorblast-c2-analysis/) | C2 traffic / incident analysis | [DOCX](tryhackme/mirrorblast-c2-analysis/Incident%20Analysis%20Report.docx) |
-| [Splunk Endpoint Forensics](tryhackme/splunk-endpoint-forensics/) | Endpoint forensics with Splunk | [DOCX](tryhackme/splunk-endpoint-forensics/Incident%20Analysis%20Report.docx) |
+| [Volatility Memory Forensics](tryhackme/volatility-memory-forensics/) | Memory forensics (banking trojan, WannaCry) | [PDF](tryhackme/volatility-memory-forensics/report/volatility_memory_forensics_report.pdf) |
+| [MirrorBlast C2 Triage](tryhackme/mirrorblast-c2-analysis/) | PCAP C2 triage (MirrorBlast / TA505) | [DOCX](tryhackme/mirrorblast-c2-analysis/report/mirrorblast-c2-triage.docx) |
+| [Endpoint Intrusion Analysis](tryhackme/splunk-endpoint-forensics/) | Splunk/Sysmon endpoint intrusion | [DOCX](tryhackme/splunk-endpoint-forensics/report/endpoint-intrusion-analysis.docx) |
 
 ## Repository layout
 
