@@ -17,7 +17,7 @@ A free online jeopardy-style CTF (Nov 2026).
 | Challenge | Category | Points | Status | Writeup |
 |---|---|---:|---|---|
 | Operation Blackout | ICS | 708 | ✅ Solved | [writeup](ctf/csctf-2026/ics-operation-blackout/operation-blackout.md) |
-| Velora | Web | 900 | 🚧 In progress | [writeup](ctf/csctf-2026/web-velora/velora.md) |
+| Velora | Web | 900 | ✅ Solved | [writeup](ctf/csctf-2026/web-velora/velora.md) |
 
 ## TryHackMe labs
 
