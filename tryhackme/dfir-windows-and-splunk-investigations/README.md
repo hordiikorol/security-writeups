@@ -122,4 +122,4 @@ These findings confirm a **full compromise** of the affected host, which require
 
 ---
 
-*Full original report (PDF): [splunk_log_intrusion_analysis.pdf](report/splunk_log_intrusion_analysis.pdf). Originally published at `github.com/hordiikorol/dfir-windows-and-splunk-investigations`.*
+*Originally published at `github.com/hordiikorol/dfir-windows-and-splunk-investigations`.*

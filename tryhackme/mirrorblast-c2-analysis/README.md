@@ -90,4 +90,4 @@ The investigation confirms a successful compromise of host `172.16.1.102`. The p
 
 ---
 
-*Full original report (DOCX): [mirrorblast-c2-triage.docx](report/mirrorblast-c2-triage.docx). Originally published at `github.com/hordiikorol/MirrorBlast-C2-Analysis`.*
+*Originally published at `github.com/hordiikorol/MirrorBlast-C2-Analysis`.*

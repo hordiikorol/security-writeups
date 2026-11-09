@@ -21,15 +21,15 @@ A free online jeopardy-style CTF (Nov 2026).
 
 ## TryHackMe labs
 
-Standalone DFIR / blue-team investigations, each with a full report and supporting evidence.
+Standalone DFIR / blue-team investigations, each written up in full with supporting screenshots.
 
-| Lab | Focus | Report |
+| Lab | Focus | Write-up |
 |---|---|---|
-| [Investigating Windows DFIR](tryhackme/investigating-windows-dfir/) | Host-based Windows Server compromise analysis | [PDF](tryhackme/investigating-windows-dfir/report/windows_host_compromise_analysis.pdf) |
-| [DFIR — Windows & Splunk Investigations](tryhackme/dfir-windows-and-splunk-investigations/) | Splunk log intrusion analysis | [PDF](tryhackme/dfir-windows-and-splunk-investigations/report/splunk_log_intrusion_analysis.pdf) |
-| [Volatility Memory Forensics](tryhackme/volatility-memory-forensics/) | Memory forensics (banking trojan, WannaCry) | [PDF](tryhackme/volatility-memory-forensics/report/volatility_memory_forensics_report.pdf) |
-| [MirrorBlast C2 Triage](tryhackme/mirrorblast-c2-analysis/) | PCAP C2 triage (MirrorBlast / TA505) | [DOCX](tryhackme/mirrorblast-c2-analysis/report/mirrorblast-c2-triage.docx) |
-| [Endpoint Intrusion Analysis](tryhackme/splunk-endpoint-forensics/) | Splunk/Sysmon endpoint intrusion | [DOCX](tryhackme/splunk-endpoint-forensics/report/endpoint-intrusion-analysis.docx) |
+| Investigating Windows DFIR | Host-based Windows Server compromise analysis | [read](tryhackme/investigating-windows-dfir/) |
+| DFIR — Windows & Splunk Investigations | Splunk log intrusion analysis | [read](tryhackme/dfir-windows-and-splunk-investigations/) |
+| Volatility Memory Forensics | Memory forensics (banking trojan, WannaCry) | [read](tryhackme/volatility-memory-forensics/) |
+| MirrorBlast C2 Triage | PCAP C2 triage (MirrorBlast / TA505) | [read](tryhackme/mirrorblast-c2-analysis/) |
+| Endpoint Intrusion Analysis | Splunk/Sysmon endpoint intrusion | [read](tryhackme/splunk-endpoint-forensics/) |
 
 ## Repository layout
 
@@ -39,7 +39,7 @@ ctf/                     CTF writeups, grouped by event then challenge
     ics-operation-blackout/   writeup + images + challenge-files
     web-velora/               writeup + images
 tryhackme/               Standalone TryHackMe lab investigations
-  <lab>/                      README + report + evidence/screenshots
+  <lab>/                      README (full write-up) + evidence/screenshots
 ```
 
 Each CTF challenge folder keeps its screenshots in `images/` and (where provided) the original challenge artifacts in `challenge-files/`.

@@ -120,4 +120,4 @@ Both memory dumps demonstrate clear malicious activity and provide strong forens
 
 ---
 
-*Full original report (PDF): [volatility_memory_forensics_report.pdf](report/volatility_memory_forensics_report.pdf). Originally published at `github.com/hordiikorol/volatility-memory-forensics`.*
+*Originally published at `github.com/hordiikorol/volatility-memory-forensics`.*

@@ -73,4 +73,4 @@ The workstation was successfully compromised by an actor using credential harves
 
 ---
 
-*Full original report (DOCX): [endpoint-intrusion-analysis.docx](report/endpoint-intrusion-analysis.docx). Originally published at `github.com/hordiikorol/Splunk-Endpoint-Forensics`.*
+*Originally published at `github.com/hordiikorol/Splunk-Endpoint-Forensics`.*

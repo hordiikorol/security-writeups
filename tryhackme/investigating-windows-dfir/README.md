@@ -149,4 +149,4 @@ The system should be considered **fully compromised** and requires immediate iso
 
 ---
 
-*Full original report (PDF): [windows_host_compromise_analysis.pdf](report/windows_host_compromise_analysis.pdf). Originally published at `github.com/hordiikorol/investigating-windows-dfir`.*
+*Originally published at `github.com/hordiikorol/investigating-windows-dfir`.*
