@@ -14,8 +14,8 @@ I am a first-semester MSc Cybersecurity student at TalTech with a BSc in IT. My 
 
 A free online jeopardy-style CTF (Nov 2026).
 
-| Challenge | Category | Points | Status | Writeup |
-|---|---|---:|---|---|
+| Challenge | Category | Status | Writeup |
+|---|---|---|---|
 | Operation Blackout | ICS | ✅ Solved | [writeup](ctf/csctf-2026/ics-operation-blackout/operation-blackout.md) |
 | Velora | Web | ✅ Solved | [writeup](ctf/csctf-2026/web-velora/velora.md) |
 
